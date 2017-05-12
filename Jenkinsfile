@@ -19,7 +19,12 @@ node('iOS Node') {
     }
 
     stage ('TU') {
-       sh 'xcodebuild -scheme "TimeTable" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 6S,OS=10.3" -enableCodeCoverage YES'
+      // Run tests and generate junit report.
+       sh 'xcodebuild -scheme "TimeTable" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 6S,OS=10.3" -enableCodeCoverage YES | /Users/jenkins/.rbenv/shims/xcpretty --report junit'
+
+       // Publish test results.
+       step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: 'build/reports/junit.xml'])
+
     }
 
 
