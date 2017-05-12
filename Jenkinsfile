@@ -33,6 +33,12 @@ node('iOS Node') {
 
     stage('Qualité') {
 
+    // Generate Code Coverage report
+    sh '/Users/jenkins/.rbenv/shims/slather coverage --jenkins --html --scheme TimeTable TimeTable.xcodeproj/'
+
+    // Publish coverage results
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'html', reportFiles: 'index.html', reportName: 'Coverage Report'])
+
     }
 
     stage ('Déploiement') {
