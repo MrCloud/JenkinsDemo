@@ -1,6 +1,6 @@
 node('iOS Node') {
 
-    stage('Checkout/Build/TU') {
+    stage('Checkout/Build') {
 
     // Checkout files.
        checkout([
@@ -15,9 +15,13 @@ node('iOS Node') {
        ])
 
        // Build
-       sh 'xcodebuild -scheme "TimeTable" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 6S,OS=10.3" -enableCodeCoverage YES'
-
+       sh 'xcodebuild -scheme "TimeTable" -configuration "Debug" -sdk "iphonesimulator" build'
     }
+
+    stage ('TU') {
+       sh 'xcodebuild -scheme "TimeTable" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 6S,OS=10.3" -enableCodeCoverage YES'
+    }
+
 
     stage ('Appium') {
     }
