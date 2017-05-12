@@ -12,7 +12,6 @@
 		DB29D1D01DEAEF63006792E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7843E1DACFBE40020E254 /* AppDelegate.swift */; };
 		DB29D1D11DEAEFA5006792E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB784421DACFBE40020E254 /* Main.storyboard */; };
 		DB29D1D21DEAEFA9006792E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB784471DACFBE40020E254 /* LaunchScreen.storyboard */; };
-		DB63A16D1E8EA77A001E7297 /* ApplicationLifeCycleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63A16C1E8EA77A001E7297 /* ApplicationLifeCycleService.swift */; };
 		DB8326A51E3B8BC500A14C93 /* ExampleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8326A41E3B8BC500A14C93 /* ExampleTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +27,6 @@
 		DB29D1E61DEAF267006792E4 /* Rambafile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rambafile; sourceTree = "<group>"; };
 		DB29D1E71DEAF270006792E4 /* sonar-project.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
 		DB3BDA101DC0A343001F27AD /* JenkinsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB63A16C1E8EA77A001E7297 /* ApplicationLifeCycleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationLifeCycleService.swift; sourceTree = "<group>"; };
-		DB7C5FB11E28D7020079B437 /* build-config.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "build-config.yml"; sourceTree = "<group>"; };
 		DB8326A41E3B8BC500A14C93 /* ExampleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTest.swift; sourceTree = "<group>"; };
 		DBB7843E1DACFBE40020E254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB784431DACFBE40020E254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 		DB29D1D31DEAF0B6006792E4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				DB63A16B1E8EA687001E7297 /* ApplicationServices */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -115,18 +111,9 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DB63A16B1E8EA687001E7297 /* ApplicationServices */ = {
-			isa = PBXGroup;
-			children = (
-				DB63A16C1E8EA77A001E7297 /* ApplicationLifeCycleService.swift */,
-			);
-			path = ApplicationServices;
-			sourceTree = "<group>";
-		};
 		DBB784321DACFBE40020E254 = {
 			isa = PBXGroup;
 			children = (
-				DB7C5FB11E28D7020079B437 /* build-config.yml */,
 				DB29D1E31DEAF245006792E4 /* README.md */,
 				DB29D1E41DEAF24F006792E4 /* CONDUCT.md */,
 				DB29D1E51DEAF24F006792E4 /* CONTRIBUTING.md */,
@@ -187,7 +174,6 @@
 				DB3BDA0E1DC0A343001F27AD /* Resources */,
 				9750A9465DBAA4FE838FE51A /* [CP] Embed Pods Frameworks */,
 				9155442652CF0CD3A5A29EE5 /* [CP] Copy Pods Resources */,
-				DB7C5FB31E28D7680079B437 /* [PiOS] Natrium Check Config Generation */,
 			);
 			buildRules = (
 			);
@@ -323,20 +309,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JenkinsDemo/Pods-JenkinsDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB7C5FB31E28D7680079B437 /* [PiOS] Natrium Check Config Generation */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[PiOS] Natrium Check Config Generation";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"${PROJECT_DIR}/Pods/Natrium/Natrium/checkbuild.sh\"";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -345,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB29D1D01DEAEF63006792E4 /* AppDelegate.swift in Sources */,
-				DB63A16D1E8EA77A001E7297 /* ApplicationLifeCycleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
