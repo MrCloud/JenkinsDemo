@@ -51,6 +51,9 @@ node('iOS Node') {
     }
 
     stage ('Déploiement') {
+      // Archiver ipa
+      sh 'fastlane gym --configuration "Release"'
+      sh 'fastlane pilot upload'
     }
 
 }
