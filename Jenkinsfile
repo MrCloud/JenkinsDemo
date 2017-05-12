@@ -48,6 +48,8 @@ node('iOS Node') {
             step([$class: 'CheckStylePublisher', canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'checkstyle.xml', unHealthy: ''])
         }, failFast: true|false
 
+        sh './run-sonar-swift.sh'
+        
     }
 
     stage ('Déploiement') {
