@@ -1,0 +1,21 @@
+environments:
+  - Dev
+  - Qualif
+  - Preproduction
+  - Production
+
+infoplist:
+    CFBundleDisplayName:
+        Dev: JenkinsDemo_Dev
+        Qualif: JenkinsDemo_Qualif
+        Preproduction: JenkinsDemo_Preproduction
+        Production: JenkinsDemo_Production
+
+variables:
+    baseURL:
+        Dev: "dev.example.com"
+        Qualif: "qualif.example.com"
+        Preproduction: "preproduction.example.com"
+        Production: "production.example.com"
+
+
